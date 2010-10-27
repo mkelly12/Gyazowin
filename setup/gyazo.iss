@@ -6,18 +6,18 @@
 ; Do not use the same AppId value in installers for other applications.
 ; (To generate a new GUID, click Tools | Generate GUID inside the IDE.)
 AppId={{6DB8C365-E719-4BA5-9594-10DFC244D3FD}
-AppName=Gyazo
-AppVerName=Gyazo 1.0
-OutputBaseFilename=GyazoSetup
+AppName=Notable
+AppVerName=Notable 1.0
+OutputBaseFilename=NotableSetup
 AppPublisher=Toshiyuki Masui
-AppPublisherURL=http://gyazo.com/
-AppSupportURL=http://gyazo.com/
-AppUpdatesURL=http://gyazo.com/
-DefaultDirName={pf}\Gyazo
+AppPublisherURL=http://www.notableapp.com/
+AppSupportURL=http://www.notableapp.com/
+AppUpdatesURL=http://www.notableapp.com/
+DefaultDirName={pf}\Notable
 DisableDirPage=yes
 DisableReadyMemo=yes
 DisableReadyPage=yes
-DefaultGroupName=Gyazo
+DefaultGroupName=Notable
 DisableProgramGroupPage=yes
 Compression=lzma
 SolidCompression=yes
@@ -53,18 +53,18 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescription: "{cm:AdditionalIcons}";
 
 [Files]
-Source: "..\Release\gyazowin.exe"; DestDir: "{app}"; Flags: ignoreversion restartreplace
+Source: "..\Release\notable.exe"; DestDir: "{app}"; Flags: ignoreversion restartreplace
 Source: "..\Readme.txt"; DestDir: "{app}"
 Source: "gdiplus.dll"; DestDir: "{app}"; OnlyBelowVersion:0,5.01.2600
 ; gdiplus.dll only for windows 2000 or before
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
-Name: "{group}\Gyazo"; Filename: "{app}\gyazowin.exe"
-Name: "{group}\{cm:UninstallProgram,Gyazo}"; Filename: "{uninstallexe}"
-Name: "{commondesktop}\Gyazo"; Filename: "{app}\gyazowin.exe"; Tasks: "desktopicon"
-Name: "{userappdata}\Microsoft\Internet Explorer\Quick Launch\Gyazo"; Filename: "{app}\gyazowin.exe"; Tasks: "quicklaunchicon"
+Name: "{group}\Notable"; Filename: "{app}\notable.exe"
+Name: "{group}\{cm:UninstallProgram,Notable}"; Filename: "{uninstallexe}"
+Name: "{commondesktop}\Notable"; Filename: "{app}\notable.exe"; Tasks: "desktopicon"
+Name: "{userappdata}\Microsoft\Internet Explorer\Quick Launch\Notable"; Filename: "{app}\notable.exe"; Tasks: "quicklaunchicon"
 
 [Run]
-Filename: "{app}\gyazowin.exe"; Description: "{cm:LaunchProgram,Gyazo}"; Flags: unchecked nowait postinstall skipifsilent
+Filename: "{app}\notable.exe"; Description: "{cm:LaunchProgram,Notable}"; Flags: unchecked nowait postinstall skipifsilent
 
